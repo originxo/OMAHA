@@ -405,6 +405,25 @@
       .mt-row .col-mcap { display: none; }
       .cta-wrap { padding: 36px; }
     }
+
+    .asset{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.asset img{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid rgba(199,255,0,.4);
+    box-shadow:0 0 15px rgba(199,255,0,.35);
+}
+
+.asset span{
+    font-weight:600;
+}
   </style>
 </head>
 <body>
@@ -476,18 +495,7 @@
     <div class="scroll-ind"><div class="mouse"></div>SCROLL</div>
   </section>
 
-  <!-- STATS -->
-  <section class="stats" id="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat"><div class="label"><span class="pulse-dot"></span>Price</div><div class="value" id="s-price">$0.00042</div><div class="delta" id="s-price-d">+4.2%</div></div>
-        <div class="stat"><div class="label"><span class="pulse-dot"></span>Market Cap</div><div class="value" id="s-mcap">$42.8M</div><div class="delta" id="s-mcap-d">+4.2%</div></div>
-        <div class="stat"><div class="label"><span class="pulse-dot"></span>Holders</div><div class="value" id="s-holders">38,204</div><div class="delta">+212 today</div></div>
-        <div class="stat"><div class="label"><span class="pulse-dot"></span>Liquidity</div><div class="value" id="s-liq">$3.84M</div><div class="delta">Locked 100%</div></div>
-        <div class="stat"><div class="label"><span class="pulse-dot"></span>24H Volume</div><div class="value" id="s-vol">$8.12M</div><div class="delta" id="s-vol-d">+22.1%</div></div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ABOUT -->
   <section id="about">
@@ -539,55 +547,7 @@
     </div>
   </section>
 
-  <!-- TOKENOMICS -->
-  <section id="tokenomics">
-    <div class="container">
-      <div class="reveal">
-        <span class="eyebrow"><span class="dot"></span> Tokenomics</span>
-        <h2 class="section-title">Transparent. <span class="accent">Locked.</span> Immutable.</h2>
-        <p class="section-sub">A single, fair-launch supply with zero hidden mechanics. Every token in circulation was bought at market price.</p>
-      </div>
-      <div class="tk-grid">
-        <div class="tk-card glow reveal">
-          <div class="k">Total Supply</div>
-          <div class="v acid">1,000,000,000</div>
-          <div class="meta">$OMAHA · fixed, no mint</div>
-        </div>
-        <div class="tk-card reveal">
-          <div class="k">Burned</div>
-          <div class="v">42.0%</div>
-          <div class="meta">Permanently removed from circulation</div>
-        </div>
-        <div class="tk-card reveal">
-          <div class="k">Liquidity Locked</div>
-          <div class="v">100%</div>
-          <div class="meta">Locked via Raydium for 100 years</div>
-        </div>
-        <div class="tk-card reveal">
-          <div class="k">Ownership</div>
-          <div class="v">Renounced</div>
-          <div class="meta">Contract immutable, no admin keys</div>
-        </div>
-        <div class="tk-card reveal">
-          <div class="k">Buy / Sell Tax</div>
-          <div class="v">0 / 0</div>
-          <div class="meta">Zero tax. Zero friction.</div>
-        </div>
-        <div class="tk-card reveal">
-          <div class="k">Holders</div>
-          <div class="v">38,204</div>
-          <div class="meta">Growing daily · no whale dominance</div>
-        </div>
-      </div>
-      <div class="contract reveal">
-        <div>
-          <div style="color:var(--muted); font-size:12px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:6px;">Contract Address (Solana)</div>
-          <div class="addr" id="contract-addr">AC1Dx9vK7rQp2LmNz4Jw8TbH6YcF3EaR5VdXuPq9sKb2</div>
-        </div>
-        <button class="copy-btn" id="copyBtn">Copy</button>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- MARKET -->
   <section id="market">
@@ -595,22 +555,18 @@
       <div class="reveal">
         <span class="eyebrow"><span class="dot"></span> Live Market</span>
         <h2 class="section-title">The <span class="accent">meme arena</span>.</h2>
-        <p class="section-sub">Live data from CoinGecko. ACIDCAT competes — and wins — in the tier that matters.</p>
+        <p class="section-sub">Live data from CoinGecko. OMAHA competes — and wins — in the tier that matters.</p>
       </div>
-      <div class="market-table reveal">
-        <div class="mt-row head">
-          <div>Asset</div>
-          <div>Price</div>
-          <div class="col-mcap">Market Cap</div>
-          <div>24H</div>
-          <div class="col-vol">Volume (24H)</div>
-        </div>
-        <div id="mt-body">
-          <div class="mt-row"><div colspan="5" style="color:var(--muted); padding: 30px 0; text-align:center;">Loading live data…</div></div>
-        </div>
-      </div>
+      <div class="mt-row">
+    <div class="asset">
+        <img src="\logo\ssss.png" alt="OMAHA">
+        <span>OMAHA</span>
     </div>
-  </section>
+    <div>$0.0000123</div>
+    <div class="col-mcap">$92.9M</div>
+    <div>+18.4%</div>
+    <div class="col-vol">$8.4M</div>
+</div>
 
   <!-- ROADMAP -->
   <section id="roadmap">
@@ -690,9 +646,9 @@
         <p class="section-sub">Every channel is a front line. Pick your weapon.</p>
       </div>
       <div class="community-grid">
-        <a class="social reveal" href="#"><div class="l"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></div><div><h4>Telegram</h4><p>24,812 members</p></div></div><span class="arrow">↗</span></a>
+        <a class="social reveal" href="https://t.me/omahameme"><div class="l"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></div><div><h4>Telegram</h4><p>24,812 members</p></div></div><span class="arrow">↗</span></a>
         <a class="social reveal" href="#"><div class="l"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3c-.2.36-.43.85-.59 1.24a18.27 18.27 0 0 0-5.487 0C10.32 3.85 10.08 3.36 9.88 3a19.74 19.74 0 0 0-3.76 1.37C2.41 9.94 1.6 15.33 2 20.66a19.9 19.9 0 0 0 6.04 3.04c.49-.66.92-1.36 1.3-2.1-.71-.27-1.39-.6-2.03-.99.17-.13.34-.26.5-.4 3.94 1.83 8.2 1.83 12.09 0 .16.14.33.27.5.4-.65.39-1.33.72-2.04.99.38.74.81 1.44 1.3 2.1A19.86 19.86 0 0 0 25.7 20.66c.48-6.18-.87-11.52-3.38-16.29zM9.68 17.34c-1.18 0-2.15-1.08-2.15-2.41 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.15 2.42 0 1.33-.95 2.41-2.15 2.41zm7.97 0c-1.18 0-2.15-1.08-2.15-2.41 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.15 2.42 0 1.33-.94 2.41-2.15 2.41z" transform="translate(-1.7 0)"/></svg></div><div><h4>Discord</h4><p>18,304 members</p></div></div><span class="arrow">↗</span></a>
-        <a class="social reveal" href="#"><div class="l"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></div><div><h4>X / Twitter</h4><p>@acidcat_sol · 62k</p></div></div><span class="arrow">↗</span></a>
+        <a class="social reveal" href="https://x.com/omahameme?s=11"><div class="l"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></div><div><h4>X / Twitter</h4><p>@Omahameme · 11k</p></div></div><span class="arrow">↗</span></a>
         <a class="social reveal" href="#"><div class="l"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg></div><div><h4>DexScreener</h4><p>Live chart + pairs</p></div></div><span class="arrow">↗</span></a>
         <a class="social reveal" href="#"><div class="l"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 10c0-1.5 1.5-2 3-2s3 .5 3 2-1.5 2-3 2-3 .5-3 2 1.5 2 3 2 3-.5 3-2"/></svg></div><div><h4>CoinGecko</h4><p>Official listing</p></div></div><span class="arrow">↗</span></a>
         <a class="social reveal" href="#"><div class="l"><div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg></div><div><h4>CoinMarketCap</h4><p>Official listing</p></div></div><span class="arrow">↗</span></a>
@@ -720,11 +676,11 @@
     <div class="container">
       <div class="foot-grid">
         <div class="foot-about">
-          <a href="#home" class="logo"><span class="logo-mark"></span><span>$OMAHA</span></a>
+          <a href="#home" class="\logo\ssss.png"><span class="logo-mark"></span><span>$OMAHA</span></a>
           <p>The name that almost ruled retail. Built by the community. Powered by history. Designed for the next generation of crypto.</p>
           <div class="foot-socials">
-            <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
-            <a href="#" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a>
+            <a href="https://x.com/omahameme?s=11" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+            <a href="https://t.me/omahameme" aria-label="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a>
             <a href="#" aria-label="Discord"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3c-.2.36-.43.85-.59 1.24a18.27 18.27 0 0 0-5.487 0C10.32 3.85 10.08 3.36 9.88 3a19.74 19.74 0 0 0-3.76 1.37C2.41 9.94 1.6 15.33 2 20.66a19.9 19.9 0 0 0 6.04 3.04c.49-.66.92-1.36 1.3-2.1-.71-.27-1.39-.6-2.03-.99.17-.13.34-.26.5-.4 3.94 1.83 8.2 1.83 12.09 0 .16.14.33.27.5.4-.65.39-1.33.72-2.04.99.38.74.81 1.44 1.3 2.1A19.86 19.86 0 0 0 25.7 20.66c.48-6.18-.87-11.52-3.38-16.29zM9.68 17.34c-1.18 0-2.15-1.08-2.15-2.41 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.15 2.42 0 1.33-.95 2.41-2.15 2.41zm7.97 0c-1.18 0-2.15-1.08-2.15-2.41 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.15 2.42 0 1.33-.94 2.41-2.15 2.41z" transform="translate(-1.7 0)"/></svg></a>
           </div>
         </div>
@@ -760,7 +716,7 @@
       </div>
       <div class="foot-bottom">
         <div>© 2026 $OMAHA. All rights reserved.</div>
-        <div>Made with neon green & internet energy.</div>
+        <div></div>
       </div>
     </div>
   </footer>
